@@ -1,0 +1,33 @@
+<h1>Student Entry</h1>
+<form #nameForm="ngForm" >
+
+<label>Student Number: </label>
+<input type="text" id="studNum" name="studNum"  ngModel 
+       required pattern="[0-9]+" 
+       #studNum="ngModel"
+       required
+       ><br>
+
+<label>First Name: </label>
+<input type="text" id="fName" name="fName" ngModel
+       required pattern="[A-z]+" 
+       #fName="ngModel"><br>
+
+<label>Last Name: </label>
+<input type="text" id="lName" name="lName" ngModel
+       required pattern="[A-z]+" 
+       #lName="ngModel"><br>
+
+<label>Program: </label>
+<input type="text" id="studProg" name="studProg" ngModel
+       required pattern="[A-z]+" 
+       #studProg="ngModel"><br>
+
+<label >Year: </label>
+<input type="text" id="studYear" name="studYear" ngModel
+       required pattern="[1-5]+" 
+       #Year="ngModel"><br><br>
+ 
+<button (click)="onSubmit(nameForm)" [disabled]="nameForm.form.invalid">Submit</button>
+
+</form>
